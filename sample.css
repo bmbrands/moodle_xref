@@ -59,7 +59,7 @@ A:hover { text-decoration: underline; }
 /* .pagetitle { background-color: #8298BA; } */
 /* .pagetitle { background-color: #D4ED9C; } */
 /* .pagetitle { background-color: #759096; } */
-.pagetitle { background-color: #858FA9; margin-top: 35px;}
+.pagetitle { background-color: #858FA9; }
 .pagetitle H3 {
     font-size: 16px;
     font-style: italic;
@@ -78,15 +78,15 @@ A:hover { text-decoration: underline; }
 .searchbox-link {text-align: center; }
 .searchbox-link A {color: #fff; font-weight: bold; font-size: xx-small;}
 A:visited.searchbox-link { font-weight: bold; color: #fff; }
-.searchbox { width: 100%;position: fixed; top:0 ; right: 0;padding: 0px; margin: 0px; color: #000; font-weight: normal; visibility: visible !important;}
+.searchbox { padding: 0px; margin: 0px; color: #000; font-weight: normal; visibility: hidden;}
 .searchbox-title { background-color: #bbf; color: #000; font-weight: bold; font-size: xx-small; text-align: center;}
 .searchbox-title A { color: #126; }
 .searchbox-body A { color: #fff; text-decoration: underline; font-weight: normal;}
 A:visited.searchbox-body { color: #fff; text-decoration: underline; }
-.searchbox-body { background-color: #335; font-size: xx-small;} 
-.searchbox-body INPUT { border: 0px; margin-top: 4px; background-color: #fff;}
-input.searchbox-button { font-size: xx-small; border: 0px; border-bottom: 1px solid #000; background-color: #446; color: #fff;}
-.searchbox br {display: none;}
+.searchbox-body { background-color: #335; font-size: xx-small; text-align: right;} 
+.searchbox-body INPUT { border: 0px; border-bottom: 1px solid #000; background-color: #446; color: #fff;}
+.searchbox-button { font-size: xx-small; border: 0px; border-bottom: 1px solid #000; background-color: #446; color: #fff;}
+
 /* source listing */
 .listing { 
     /*font-family: Monospace;

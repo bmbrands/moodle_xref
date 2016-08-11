@@ -213,6 +213,15 @@ class auth_plugin_base {
     }
 
     /**
+     * Returns false if this plugin is enabled but not configured.
+     *
+     * @return bool
+     */
+    public function is_configured() {
+        return false;
+    }
+
+    /**
      * Indicates if password hashes should be stored in local moodle database.
      * @return bool true means md5 password hash stored in user table, false means flag 'not_cached' stored there instead
      */
@@ -456,6 +465,18 @@ class auth_plugin_base {
     }
 
     /**
+     * Pre user_login hook.
+     * This method is called from authenticate_user_login() right after the user
+     * object is generated. This gives the auth plugins an option to make adjustments
+     * before the verification process starts.
+     *
+     * @param object $user user object, later used for $USER
+     */
+    public function pre_user_login_hook(&$user) {
+        // Override if needed.
+    }
+
+    /**
      * Post authentication hook.
      * This method is called from authenticate_user_login() for all enabled auth plugins.
      *
@@ -527,7 +548,7 @@ class auth_plugin_base {
     }
 
     /**
-     * Returns whether or not the captcha element is enabled, and the admin settings fulfil its requirements.
+     * Returns whether or not the captcha element is enabled.
      *
      * @abstract Implement in child classes
      * @return bool
